@@ -1,0 +1,90 @@
+
+Git 安装
+
+Git 是分布式的，SVN 不是
+
+git config --global user.name "luozhonghu"
+git config --global user.email luo_zhonghu@163.com
+
+
+git config --list
+
+vim ~/.gitconfig 
+
+生成 SSH 密钥
+ssh-keygen -t rsa -b 4096 -C "luo_zhonghu@163.com"
+密码 ：Qwer1234-
+
+显示公钥
+cat ~/.ssh/id_rsa.pub
+
+Your public key has been saved in Qwer1234-.pub
+The key fingerprint is:
+SHA256:cgeXm5WxiPmoGxAUEdgIzB/r2z3PxLziIXSQKZZWPkw luo_zhonghu@163.com
+The key's randomart image is:
++---[RSA 4096]----+
+|+. +=E      .    |
+| oooB o  o o +   |
+|  .=+B  + + +    |
+|  oo..o  = +     |
+|  . ....S =      |
+|   ....+o.       |
+|    o.+. +       |
+|   . ..*+ .      |
+|      o.++       |
++----[SHA256]-----+
+
+cat ~/Qwer1234-.pub
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDACb5i6UiIQMNAB7ZTAYASdZMFrIHn6KU7Cq32YclxzK9U2SFDFHwvVABG7zOqRJz6ICcHjghzsc8ZoqyCKNEFjmdwKrAxrRM3b5sP0qJsHqMmh7KUah3jtFySb07byKreZUzosStuHb3CLa7oTshVUxMrJpgfRITd9enxXJ+5k8uezajCvmcKM4wqr1NyuCjzzSfrHTRxxUT5JiL1S32xF5A2cnJRb8odDb2zCcgU6H4yxpvaUXWXE71MKNBT/+DNjLRNa4d9S4Pa66xMVFkaqPCL87ehwtPV5xaTXeqPn865CQqSw2IHZEmDFbo8/VAZ4gc0FkLrz/q065CvMtRc60U67svI5nI4gFj82KoQMo1Bd39Jv3eMZh18QD5R6XbUQ3d/aTmSOQBaH3XsVZAkxV8uZO0lnTibSaj4r5dilyyIcsnVsOTU2GckzAVeEQV7fn3zTh09JR/Ov5CyIeAtEZ0aZKxHnnjzR2FZ7YIPozXo1QlErikzgoMW4+Y1+Pjq0PzTCy3k9X+F9WCSNSq2f6xGgq91nKF7WBDE7Lix3vn8qqA1CIn/VJj+PUQ6r0qsbCBiHhoI7gsACcgxHMARej5fmVt8khLPDMVU2IXU2mtTlnAXWO4/0y5i/jQH6B1eYdyVfb+XOcIOnbWRGfXTnknWdFI6NJU7Rg56/JK+4w== luo_zhonghu@163.com
+
+git --version
+git config --list
+
+# 基本操作
+
+1、克隆仓库
+git clone https://github.com/username/repo.git
+cd repo 
+
+2、创建新分支
+git checkout -b new-feature
+
+3、工作目录
+在工作目录中进行代码编辑、添加新文件或删除不需要的文件。
+
+4、暂存文件
+git add filename
+# 或者添加所有修改的文件
+git add .
+
+5、提交更改
+git commit -m "Add new feature"
+
+6、拉取最新更改
+git pull origin main
+# 或者如果在新的分支上工作
+git pull origin new-feature
+
+7、推送更改
+git push origin new-feature 
+
+8、创建 Pull Request（PR）
+在 GitHub 或其他托管平台上创建 Pull Request，邀请团队成员进行代码审查。PR 合并后，你的更改就会合并到主分支。
+
+9、合并更改
+git checkout main
+git pull origin main
+git merge new-feature
+
+10、删除分支
+git branch -d new-feature
+
+git push origin --delete new-feature
+
+证书更换 
+
+
+
+
+
